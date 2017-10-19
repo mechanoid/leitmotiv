@@ -11,7 +11,7 @@
     "test": "eslint --cache *.js src && flow check && echo ✓",
     "flow": "flow-remove-types --pretty src/ --out-dir lib/",
     "build": "npm run flow",
-    "prepublish": "npm run build",
+    "prepublish": "npm run test && npm run build",
     "start": "node --experimental-modules index.js"
   },
   "description": "",
