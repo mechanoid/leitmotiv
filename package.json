@@ -22,6 +22,7 @@
     "standard": "^10.0.3"
   },
   "dependencies": {
+    "chalk": "^2.2.0",
     "flow-bin": "^0.57.3",
     "flow-remove-types": "^1.2.3"
   }
