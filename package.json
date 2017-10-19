@@ -1,0 +1,28 @@
+{
+  "name": "leitmotiv",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Falk Hoppe <falkhoppe81@gmail.com>",
+  "license": "Apache-2.0",
+  "bin": {
+    "leitmotiv": "bin/leitmotiv.mjs"
+  },
+  "scripts": {
+    "test": "eslint --cache *.js src && flow check && echo ✓",
+    "flow": "flow-remove-types --pretty src/ --out-dir lib/",
+    "build": "npm run flow",
+    "prepublish": "npm run build",
+    "start": "node --experimental-modules index.js"
+  },
+  "description": "",
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "flow-bin": "^0.57.3",
+    "flow-remove-types": "^1.2.3"
+  }
+}
